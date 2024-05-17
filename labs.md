@@ -7,9 +7,9 @@
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
 
-**Lab 1 - Learning how to create good prompts for Copilot**
+**Lab 1 - Learning how to create good prompts for Codeium**
 
-**Purpose: In this lab, we’ll start to learn about Copilot and how it generates code based on the prompts we provide**
+**Purpose: In this lab, we’ll start to learn about Codeium and how it generates code based on the prompts we provide**
 
 1. Create a new file. In the terminal, enter
 
@@ -19,18 +19,18 @@
 
 2. Afterwards this file should be open in a tab in the editor.
 
-3. Let's see how Copilot responds to a generic request. Go to that tab and type in a comment that says
+3. Let's see how Codeium responds to a generic request. Go to that tab and type in a comment that says
 
 ```
 // function to parse data
 ```
-4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line.
+4. Hit return and notice the code that Codeium suggested. This is likely more generic than we want, but hit tab to select that line or function definition. If Codeium only generates part of the function, use Tab to accept each part and then hit return to get the next line until you have a complete funcion.
    
-5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function. One example of what code may look like is below.
+One example of what code may look like is below.
 
-![Copilot generated function](./images/cpho5.png?raw=true "Copilot generated function")
+![Codeium generated function](./images/codeium-12.png?raw=true "Codeium generated function")
    
-6. This prompt is not specific enough for Copilot to interpret what we want to do.  Highlight the code and delete it, so we can try again.
+6. This prompt is not really specific enough for Codeium to interpret what we want to do.  Highlight the code and delete it, so we can try again.
 
 7. Now type a comment at the top that says
 
@@ -43,8 +43,7 @@
 function parseURL(url) {
 ```
 
-9. Just hit Tab to accept it and Enter again. After that Copilot may or may not offer a suggestion.  If it does, great - you can just hit Tab and accept it.  If not, it may be necessary to further "nudge" Copilot by giving more prompts. Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.
-
+9. Just hit Tab to accept it and Enter again and follow the same pattern (Enter, Tab) to produce a full function. Give Codeium a second or two between each suggestion. You'll know you've got a complete function when there are no problems showing up in the PROBLEMS tab and/or there's no red lines in the code. Example output is shown below.
 ```
 // parse url
 ```
