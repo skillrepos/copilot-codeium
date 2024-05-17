@@ -23,9 +23,7 @@
 			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-				"GitHub.copilot-chat",
-				"GitHub.copilot",
-				"GitHub.copilot-labs"
+				"Codeium.codeium"
 			]
 		}
 	},
