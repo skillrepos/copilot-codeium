@@ -1,27 +1,13 @@
-# GitHub Copilot Hands-on - lab setup
+# Codeium Basics - lab setup
 
 These instructions will guide you through configuring a GitHub Codespaces environment that you can use to run the course labs. 
 If you prefer and if you know one of the other IDEs supported by Copilot, you can use that. But the instructions will reference the codespace version.
 
 These steps **must** be completed prior to starting the actual labs.
 
-## 1. Ensure that you are signed up for Copilot access. 
+## 1. Create your own fork of the repository for these labs
 
-If not, when signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
-
-![Signing up for Copilot](./images/cdd70.png?raw=true "Signing up for Copilot")
-
-**OR** select [Settings->Copilot](https://github.com/settings/copilot) and sign up.
-
-![Signing up for Copilot](./images/cdd32.png?raw=true "Signing up for Copilot")
-
-You can also find help there for using Copilot in other supported IDEs, set the switch for whether or not to allow matching public code suggestions, etc.
-
-![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
-
-## 2. Create your own fork of the repository for these labs
-
-- Ensure that you have created a repository by forking the [skillrepos/copilot-hands-on](https://github.com/skillrepos/copilot-hands-on) project as a template into your own GitHub area.
+- Ensure that you have created a repository by forking the [skillrepos/codeium-basics](https://github.com/skillrepos/codeium-basics) repository into your own GitHub area.
 - You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-dd** .
 
 ![Forking repository](./images/cpho1.png?raw=true "Forking the repository")
