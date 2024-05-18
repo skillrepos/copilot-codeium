@@ -22,7 +22,6 @@
 				"editor.wordWrapColumn": 9999
 			},
 			"extensions": [
-				"streetsidesoftware.code-spell-checker",
 				"Codeium.codeium"
 			]
 		}
