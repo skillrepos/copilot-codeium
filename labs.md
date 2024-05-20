@@ -321,22 +321,27 @@ select * from courses.registration where year(registration_date) = 2023 and mont
 
 1. Create a new file called *explore.go* via the same approach as you used to create other files.
 
-2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the **CMD+I** interface using the statement below. Then you can accept the suggested code.
+2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Codeium to write a function to do that. Prompt it through the **CMD+I** interface using the statement below. Then you can accept the suggested code.
 
 ```
 write a function to seed a random number generator
 ```
-![Asking Copilot to write function to seed a random number generator](./images/cdd53.png?raw=true "Asking Copilot to write function to seed a random number generator") 
+![Asking Copilot to write function to seed a random number generator](./images/codeium-65.png?raw=true "Asking Copilot to write function to seed a random number generator") 
 
-3. Copilot has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
+3. Codeium has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
 
-4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Use **CMD+I** and the query below.
+![Codeium-generated seed function](./images/codeium-67.png?raw=true "Codeium-generated seed function") 
+
+4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query in the main Chat interface. Switch to the Codeium Chat interface and enter the following prompt.
 
 ```
 Is the Seed function deprecated in Go?
 ```
+You will likely see a response in the Chat interface saying that it's not deprecated.
 
-5. Copilot probably responded with no and some info about the function. So one way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file.
+![Codeium-generated seed function](./images/codeium-69.png?raw=true "Codeium-generated seed function") 
+
+5. So one way we can help Copilot understand language updates is by providing updated context in our file. So let's start again. Delete the current content in the explore.go file.
 
 6. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
 
@@ -344,7 +349,7 @@ Is the Seed function deprecated in Go?
 	// Create and seed the generator.
 	// Typically a non-fixed seed should be used, such as time.Now().UnixNano().
 	// Using a fixed seed will produce the same output on every run.
-	r := rand.New(rand.NewSource(99))
+	// r := rand.New(rand.NewSource(99))
 ```
 
 7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via **CMD+I** and enter the statement below again.
@@ -352,9 +357,11 @@ Is the Seed function deprecated in Go?
 write a function to seed a random number generator
 ```
 
+![Codeium-generated seed function attempt 2](./images/codeium-70.png?raw=true "Codeium-generated seed function attempt 2")
+
 8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change.
 
-![Updated random number gen code after including updated usage](./images/cdd54.png?raw=true "Updated random number gen code after including updated usage")
+![Updated random number gen code after including updated usage](./images/codeium-71.png?raw=true "Updated random number gen code after including updated usage")
 
 <p align="center">
 **[END OF LAB]**
