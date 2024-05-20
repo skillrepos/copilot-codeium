@@ -1,7 +1,7 @@
 # Codeium Basics
 ## Practical Tips and Best Practices
 ## Session labs
-## Revision 1.0 - 05/17/24
+## Revision 1.0 - 05/18/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -24,13 +24,13 @@
 ```
 // function to parse data
 ```
-4. Hit return and notice the code that Codeium suggested. This is likely more generic than we want, but hit tab to select that line or function definition. If Codeium only generates part of the function, use Tab to accept each part and then hit return to get the next line until you have a complete funcion.
+4. Hit return and notice the code that Codeium suggested. This is likely more generic than we want, but hit tab to select that line.
    
-One example of what code may look like is below.
+5. After hitting tab, Codeium will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function. One example of what code may look like is below.
 
-![Codeium generated function](./images/codeium-12.png?raw=true "Codeium generated function")
+![Codeium generated function](./images/codeium-15.png?raw=true "Codeium generated function")
    
-6. This prompt is not really specific enough for Codeium to interpret what we want to do.  Highlight the code and delete it, so we can try again.
+6. This prompt is not specific enough for Codeium to interpret what we want to do.  Highlight the code and delete it, so we can try again.
 
 7. Now type a comment at the top that says
 
@@ -43,38 +43,27 @@ One example of what code may look like is below.
 function parseURL(url) {
 ```
 
-9. Just hit Tab to accept it and Enter again and follow the same pattern (Enter, Tab) to produce a full function. Give Codeium a second or two between each suggestion. You'll know you've got a complete function when there are no problems showing up in the PROBLEMS tab and/or there's no red lines in the code. Example output is shown below.
-```
-// parse url
-```
-![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
+9. Just hit Tab to accept it and Enter again. Continue to use Tab and Enter to build out the function from the suggestions that Codeium provides until you get a complete function definition - something like shown below.
 
-10. Only if needed, hit return and Copilot should start generating suggestions again. You can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way - just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
+![Codeium generated function](./images/codeium-16.png?raw=true "Codeium generated function")    
 
-11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, make sure you are in the editor for the file, highlight/select the existing code and hit **Ctrl + Enter**. A second window will open up with other suggestions.
-Be patient - it takes a bit of time for Copilot to generate alternative suggestions. After a moment though, you will have up to 10 alternatives to pick from.
-You can scan through these and then pick a different one if you want by clicking on the "Accept Solution" button under the alternative suggestion.  Note that this will add the code to the existing set, so you may want to delete the other code first.
-
-![alternative suggestions](./images/cdd4.png?raw=true "alternative suggestions")   
-
-12. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific funtion name.
+10. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific funtion name.
 Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
 
 ```
 function splitURLandReturnComponents
 ```
 
-13.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will not how many options there are (probably 2 or 3) and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions.
+11.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will note how many options there are and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions. Some may be full function suggestions and others may be only partial suggestions.  Choose an alternative you like and then select Tab to accept it.
 
-![alternative suggestions inline](./images/cdd5b.png?raw=true "alternative suggestions inline")   
+![alternative suggestions inline](./images/codeium-17.png?raw=true "alternative suggestions inline")   
 
-14. When you find an alternative you like, go ahead and tab to select it.
 
- <p align="center">
+<p align="center">
 **[END OF LAB]**
 </p>
 
-**Lab 2 - Using Copilot to simplify and explain code**
+**Lab 2 - Using Codeium to manage existing code**
 
 1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
 
@@ -86,132 +75,156 @@ code prime.py
 ```
 def is_prime(n
 ```
-3. Pick one of the offered suggestions and hit Tab.
+3. Pick one of the offered suggestions and hit Tab. Continue until you get a full function definition. One example is shown below.
 
-4. Highlight the text and hit **Ctrl+Enter** to see options
+![alternative suggestions inline](./images/codeium-18.png?raw=true "alternative suggestions inline")   
 
-5. Pick one of the options that is longer and/or more complex (if there is one) and **Accept Solution**. If there's not one that's longer/more complex, just pick an alternative one and **Accept Solution**.
+4. Let's next try some of the refactor options provided by Codeium. Click on the *Refactor* link in the Codelens menu above the code. Then select the option to *Make this faster and more efficient* (You can click on the entry in the list or type in the selection in the text entry area.)
 
-![alternative suggestions](./images/cdd34b.png?raw=true "alternative suggestions") 
+![refactor for efficiency](./images/codeium-25.png?raw=true "refactor for efficiency")         
 
-6. Highlight the code and select the Chat extension icon to open the chat window.  Tell Copilot to simplify the code by typing in the chat window.
-```
-/simplify
-```
+5. Codeium will then generate any suggested changes inline. Give it a moment to complete and then click on *Accept* to accept the changes.
 
-![simplifying via chat box](./images/cdd35.png?raw=true "simplifying via chat box") 
+![refactor to add comments](./images/codeium-32.png?raw=true "refactor to add comments") 
 
-7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there.
+6. Next, click on the *Refactor* link and select the option to *Clean up this code*.
 
-![replace from chat suggestion](./images/cdd36b.png?raw=true "replace from chat suggestion")    
+![refactor to clean up code](./images/codeium-22.png?raw=true "refactor to clean up code") 
+  
+7. Give Codeium a moment to generate is suggested changes. This time after reviewing, we'll reject the changes. Click on the *Reject* option.
 
-8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
+![refactor to clean up code](./images/codeium-33.png?raw=true "refactor to clean up code")     
 
-![introduce error](./images/cdd37b.png?raw=true "introduce error")   
+8. Finally, let's add some print statements for debugging. Select the *Refactor* link again and this time, start typing "Add print" in the text box to filter the choices. You can then select the full option from the filtered list.
 
-9. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot.
+![refactor to add print statements](./images/codeium-34.png?raw=true "refactor to add print statements")  
 
-![Copilot options inline](./images/cdd38b.png?raw=true "Copilot options inline")   
+9. After a moment, Codeium will suggest a set of changes for adding the print statements. You can just go ahead and accept these.
 
-10. Go ahead and click on the "Fix using Copilot" option.
+![refactor to add print statements](./images/codeium-35.png?raw=true "refactor to add print statements")  
 
-11. After a few moments, it will propose a fix that you can just accept (via the Accept button).
-
-![Fixing with Copilot](./images/cdd39b.png?raw=true "Fixing with Copilot")       
-
-12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get the same results.
-
+    
 <p align="center">
 **[END OF LAB]**
 </p>
 
-**Lab 3 - Using Copilot after the coding**
+**Lab 3 - Using Codeium to explain and document code**
 
-**Purpose: In this lab, we’ll see a few other ways to leverage Copilot after the initial coding is done**
+**Purpose: In this lab, we’ll see a few other ways to leverage Codeium the initial coding is done**
 
-1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the **Cmd+I** keys to bring up the Copilot interactive chat dialog.
+1. Let's have Codeium explain how our current function works. In the Codelens menu above the code, click on the *Explain* link. 
+
+![explain link](./images/codeium-36.png?raw=true "explain link") 
+
+2. The explanation is provided in the Codeium chat window. Notice the context that Codeium used (section *A* in the screenshot) and the full explanation (section *B* in the screenshot).
+
+![explain link](./images/codeium-37.png?raw=true "explain link") 
+
+3. Suppose we want to save this chat for future reference or to easily share.. Click on the 3 vertical dots in the upper right of the *CHAT* tab.
+
+![chat menu](./images/codeium-38.png?raw=true "chat menu") 
+
+4. Next, click on the *Export Conversation* item and download the file as a .md (*markdown*) text file.
+
+![download markdown file](./images/codeium-39.png?raw=true "download markdown file") 
+
+5. From wherever you downloaded it to, you can open up the .md file and view it.
+
+![view chat file](./images/codeium-40.png?raw=true "view chat file")    
+
+6. We can also use shortcut commands to do these same kind of tasks. In the Codeium Chat interface, enter the text below to see the results. Notice the results may be more in a numbered list order than the free-form text previously used.
+```
+/explain is_prime
+```
+![explain in chat](./images/codeium-41.png?raw=true "explain in chat") 
 
 ![Interactively telling Copilot to explain code](./images/cdd40b.png?raw=true "Interactively telling Copilot to explain code")
 
+7. We are done with the explanations, so let's clear those Chats from the history. Click on the *Conversations* icon (the one that looks like a clockface with a circular arrow) and select that.
 
-2. Tell Copilot to explain the code by typing the command below in the dialog. (Note, the actual word may not show up after you type.) Hit Enter. Then, you should see the output in the chat window.
+![conversations icon](./images/codeium-42.png?raw=true "conversations icon")    
 
-```
-/explain
-```
-![Output of interactively telling Copilot to explain code](./images/cdd41b.png?raw=true "Output of interactively telling Copilot to explain code")
+8. From this screen, you'll see a list of any previous chats. Hover over any chats that you want to delete, and click on the trash can icon to delete the chat. Then, when done, click on the *Back to chat* link to return back to the main chat interface.
 
-3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
-```
-# explain the code above line-by-line
-```
-4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one.
+![conversations icon](./images/codeium-43.png?raw=true "conversations icon")    
 
-![Output of telling Copilot to explain code via comment](./images/cdd42b.png?raw=true "Output of telling Copilot to explain code via comment")
+9. Next, let's generate some doc for this code. Click on the *Generate Docstring* link in the Codelens section.
 
-5. We can also query Copilot inline via asking a question in a comment. Delete the commented explanation and try out the question below. To be clear you can prefix it with :q but that is not required with the chat feature installed.
+![generate docstring](./images/codeium-44.png?raw=true "generate docstring")    
 
-```
-# q: what does the function above do?
-```
+10. The proposed change will show up in the chat interface. When it is ready, you can click on the *Apply Diff* link and then *Accept* the change in the editor.
 
-![Prompting for what code does with q:](./images/cdd43b.png?raw=true "Prompting for what code does with q:")
+![apply docstring](./images/codeium-45.png?raw=true "apply docstring")  
 
-6. Finally, let's see how to use the doc feature to automatically document our code. Highlight the actual code.
+11. Finally, let's have Codeium add some more comments in our code. Click on the *Refactor* link again and this time, select the last item *Verbosely comment this code so that I can understand what's going on. When Codeium finishes the suggestions, you can just *Accept* them. (If there is some part of the proposed change that you don't like, you can just delete those lines.)
 
-7. Now, enter **Cmd+I** and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. Do not Accept or Discard yet.
-
-![Generated doc for the code](./images/cdd44b.png?raw=true "Generated doc for the code")  
-
-8. Let's see what other doc could be generated. Click on the circular arrow button next to Discard at the bottom of the dialog and click on it to regenerate another possible doc.
-
-![Regenerating doc](./images/cdd45b.png?raw=true "Regenerating doc")  
-
-9. Once you find a doc example you like, go ahead and click **Accept**.
+![add comments](./images/codeium-46.png?raw=true "add comments")  
+    
 
 <p align="center">
 **[END OF LAB]**
 </p>
 
-**Lab 4 - Using Copilot to generate tests**
+**Lab 4 - Using Codeium to generate tests**
 
-**Purpose: In this lab, we'll see some examples of having Copilot generate tests**
+**Purpose: In this lab, we'll see some examples of having Codeium automatically generate testscases for our code**
 
-1. Start out in the *prime.py* file we've been using. Position the cursor below the code.
-
-2. Enter a comment to create unit tests
-```
-# create a function to do 5 unit tests of the code above
-```
-
-3. *If you don't get a suggestion*, enter code below to start nudging. Otherwise you can just accept the suggestion.
+1. Start out in the *prime.py* file we've been using. Bring up the inline chat interface with *CMD+I* and enter the following directive. Then click on the *Codeium: Submit* button.
 
 ```
-def test_is_prime():
+# create a function to do 5 unit tests of the code
 ```
-![generating tests via comment](./images/cdd46.png?raw=true "generating tests via comment") 
+![generating tests via comment](./images/codeium-47.png?raw=true "generating tests via comment") 
 
-4. Let's try a slightly different way of generating tests.  First, highlight and delete any parts of the current test function, including comments.
+2. This gives us a set of unit tests, but let's see what other ways we can generate testing code. Go ahead and *Reject* the suggestion.
 
-5. Let's have chat generate the tests.  Go ahead and highlight/delete any existing ones and the test function in the prime.py file.
+![suggested tests via comment](./images/codeium-48.png?raw=true "suggested tests via comment") 
 
-6. Select the set of code for *is_prime*. Then Go to chat and tell it to generate tests
+3. Bring up the inline chat interface with *CMD+I* and enter the following directive. Then click on the *Codeium: Submit* button.
 
 ```
-/tests
+# /test
 ```
-![Tests-generated tests](./images/cdd49.png?raw=true "Tests-generated tests") 
+![generating tests via command](./images/codeium-49.png?raw=true "generating tests via command") 
 
-7. We could put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file".  Go ahead and select that option and then you'll have a new file in your editor with the code that you can save as needed.
+4. Similar to the last option, this gives us a set of unit tests, but we may still be able to do better. Go ahead and *Reject* the suggestion.
 
-![Insert tests into new file](./images/cdd50.png?raw=true "Insert tests into new file") 
+![suggested tests via command](./images/codeium-50.png?raw=true "suggested tests via command") 
 
-![Saved generated unit tests file](./images/cdd50b-4.png?raw=true "Saved generated unit tests file") 
+5. Let's try a slightly different way of generating tests.  Switch to the Chat interface and enter the following text. When you get the *"@prim"* part typed, Codeium should give you a popup to select the *is_prime()* function as shown in the screenshot below. Choose that and then hit return to issue the query to Codeium.
+```
+ How would you design a comprehensive test suite for the code in @prim
+```
+![suggested tests via chat](./images/codeium-51.png?raw=true "suggested tests via chat") 
+
+6. After a few moments, Codeium should propose a set of steps for the test suite in the Chat interface, along with example code afterwards.
+
+![suggested tests via chat](./images/codeium-52.png?raw=true "suggested tests via chat") 
+
+7. Let's take the output of the chat and add it as a new file for the tests. Create a new file and call it *prime-tests.py*. You can do this from the codespace's terminal by typing the following:
+```
+code prime-tests.py
+```
+8. Switch to the new file if its not already open. Now, at the start of the code listing in the Chat interface, select the *Insert* tab and insert the code into the new *prime-tests.py* file.
+
+![copied_tests via chat](./images/codeium-53.png?raw=true "copied tests via chat") 
+  
+9. Let's double-check with Codeium for any missing test cases. With the *prime-tests.py* file open, go to the Chat interface and enter the following:
+```
+identify any missing test cases
+
+```
+10. After this runs for a bit, you will likely see it generating test cases for a few more areas. When its done generating them, you can select the ones you want from the suggested code and paste into your file.
+
+![copied_tests via chat](./images/codeium-54.png?raw=true "copied tests via chat") 
+    
+11. Save the new files if desired.
 
 
 <p align="center">
 **[END OF LAB]**
 </p>
+
 
 **Lab 5 - Using Copilot to help with SQL**
 
