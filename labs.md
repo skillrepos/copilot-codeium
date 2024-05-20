@@ -377,7 +377,7 @@ write a function to seed a random number generator
 code deployment.yaml
 ```
 
-2. Bring up the Copilot Chat dialog via **CMD+I** and enter in the following request.
+2. Bring up the Copilot Chat dialog via **CMD+I** and enter in (or copy and paste) the following request and hit the Submit button.
 
 ```
 write spec for deployment in Kubernetes with 2 replicas and image from busybox
@@ -385,31 +385,38 @@ add command to run in containers: sleep 3600
 add label app: myapp
 add label type: front-end
 ```
+![request Kubernetes manifest](./images/codeium-72.png?raw=true "request Kubernetes manifest")
 
 3. After a few moments, you should see it respond with the code. You can just Accept this.
-![Kubernetes manifest](./images/cdd57.png?raw=true "Kubernetes manifest")
+![Kubernetes manifest](./images/codeium-73.png?raw=true "Kubernetes manifest")
 
-4. Suppose we don't know how to execute this code. Let's ask Copilot. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface.
+4. Suppose we don't know how to execute this code. Let's ask Codeium. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface. (See parts 1 and 2 in the next screenshot.)
 
 ```
 How do I execute this - short version?
 ```
 
-5. Copilot should respond with something like the following:
+5. Codeium should respond with something similar to part 3 in the next screenshot. 
+![How to execute deployment](./images/codeium-74.png?raw=true "How to execute deployment")
 
-![How to execute deployment](./images/cdd58.png?raw=true "How to execute deployment")
 
-
-6. While we're in the Chat interface, let's ask it for the latest K8s version. Put the following into the dialog.
+6. While we're in the Chat interface, let's ask it for the latest K8s version that it knows of. Put the following into the dialog.
 
 ```
-what is the latest Kubernetes version?
+what is the latest Kubernetes version that you know of?
 ```
 
-7. Notice that it identifies the latest version as 1.22 as of September 2021. This highlights the out-of-date issue with the LLM.
+7. Notice that it identifies the latest version as 1.23. This highlights the out-of-date issue with the LLM.
 
-![Answer to latest K8s version](./images/cdd59.png?raw=true "Answer to latest K8s version")
+![Answer to latest K8s version](./images/codeium-75.png?raw=true "Answer to latest K8s version")
 
+8. Notice also that Codeium helpfully generated a suggested command to determine what the current Kubernetes version is, along with options to *Copy* or *Insert in Terminal*. Go ahead and select the *Insert in Terminal* option and try to execute the command.
+
+![Answer to latest K8s version](./images/codeium-76.png?raw=true "Answer to latest K8s version")
+
+9. You'll notice that there's an unknown flag error for the *--short** option. This is because that option is deprecated but Codeium wasn't aware of that change. You can run the command without that option to see the current Kubernetes version.
+
+![deprecated flag](./images/codeium-77.png?raw=true "deprecated flag")
 
 8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
 
@@ -417,20 +424,22 @@ what is the latest Kubernetes version?
 How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 ```
 
-9. Click in chat output and paste to new file via clicking on the "..." menu option.
+9. Create a new file and then paste the suggested code into the new file via the *Copy* or *Insert* option.
 
-![Add code to new file](./images/cdd60.png?raw=true "Add code to new file")
+![Add code to new file](./images/codeium-78.png?raw=true "Add code to new file")
 
 
-10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go.
+10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the *Refactor* interface tell it to translate to Go.
 
 ```
 translate to Go 
 ```
+![Go translation](./images/codeium-79.png?raw=true "Go translation")
 
-11. If you look at the output from the Chat interface, you should now have the equivalent Go code available.
 
-![Go translation](./images/cdd61.png?raw=true "Go translation")
+11. If you look at the generated differences, you should now have the equivalent Go code available for accepting.
+
+![Go translation](./images/codeium-80.png?raw=true "Go translation")
 
 <p align="center">
 **[END OF LAB]**
