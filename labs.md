@@ -459,45 +459,30 @@ code phone.js
 ```
 create a function to validate any global phone number using a regular expression
 ```
-![Regex function to validate phone #](./images/cdd62.png?raw=true "regex function to validate phone #")
+![prompt to validate phone #](./images/codeium-81.png?raw=true "prompt to validate phone #")
 
-3. Let's tell it to document the function by highlighting the code, invoking **CMD+I** and **/doc**.  You can just Accept the results.
+3. You can just *Accept* the suggested implementation.
 
-![Automatic doc of function](./images/cdd63.png?raw=true "Automatic doc of function")  
+![Regex function to validate phone #](./images/codeium-82.png?raw=true "regex function to validate phone #")   
 
-4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main Chat text entry area.
+3. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main Chat text entry area.
 ```
-create a mapping of states to area codes
-the key is the state abbreviation
-the value is an array of area codes with max 5
+create a mapping of states to area codes in JavaScript where the key is the state abbreviation and the value is an array of area codes of max size 5
 ```
-5. After running this, Copilot will generate the start of a list as shown below. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
+4. After running this, Copilot will generate the start of a list as shown below. Click on the *Insert* tab to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
 
-![Automatic gen of data](./images/cdd102.png?raw=true "Automatic gen of data") 
+![Automatic gen of data](./images/codeium-84.png?raw=true "Automatic gen of data") 
 
-6. Notice that the example mapping was only for the first few states. We want to get the remaining mappings for the other states.
-
-![Partial list of mappings](./images/cdd66.png?raw=true "Partial list of mappings") 
-
-7. Let's craft a prompt to complete the sequence. Enter the following in the main Copilot Chat entry box and then execute it.
+5. Notice that the example mapping was only for about half of the states. We want to get the remaining mappings for the other states. Let's craft a prompt to complete the sequence. Enter the following in the main Copilot Chat entry box and then execute it. (You can substitute whatever state abbreviation it ended on for "after MI".)
 
 ```
-create a mapping of the remaining states to area codes 
-the key is the state abbreviation
-the value is an array of area codes with max 5
+create a mapping of the remaining states after MI to area codes in JavaScript where the key is the state abbreviation and the value is an array of area codes of max size 5
 ```
-![Completing the mappings](./images/cdd67.png?raw=true "Completing the mappings") 
 
-8. From the generated text in the chat, if the results look ok, you can copy the mappings and add them into the code file. But, if not, you may have to give a better prompt. You can try highlighting the current mappings and use a prompt like the one shown below.  (Note that the chat shows that it only used the lines highlighted as a reference.)
 
-```
-create a mapping of the next 25 states to area codes in the same format where
-the key is the state abbreviation
-the value is an array of area codes
-```
-![Better prompt for remaining mappings](./images/cdd103.png?raw=true "Better prompt for remaining mappings") 
+6 From the generated text in the chat, if the results look ok, you can copy the mappings and add them into the code file. 
+![Completing the mappings](./images/codeium-85.png?raw=true "Completing the mappings") 
    
-![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
 
 <p align="center">
 **[END OF LAB]**
