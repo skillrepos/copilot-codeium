@@ -141,8 +141,6 @@ def is_prime(n):
 ```
 ![explain in chat](./images/codeium-41.png?raw=true "explain in chat") 
 
-![Interactively telling Copilot to explain code](./images/cdd40b.png?raw=true "Interactively telling Copilot to explain code")
-
 7. We are done with the explanations, so let's clear those Chats from the history. Click on the *Conversations* icon (the one that looks like a clockface with a circular arrow) and select that.
 
 ![conversations icon](./images/codeium-42.png?raw=true "conversations icon")    
