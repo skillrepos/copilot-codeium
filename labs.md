@@ -113,7 +113,7 @@ def is_prime(n):
 
 **Lab 3 - Using Codeium to explain and document code**
 
-**Purpose: In this lab, we’ll see a few other ways to leverage Codeium the initial coding is done**
+**Purpose: In this lab, we’ll see a few other ways to leverage Codeium after the initial coding is done**
 
 1. Let's have Codeium explain how our current function works. In the Codelens menu above the code, click on the *Explain* link. 
 
