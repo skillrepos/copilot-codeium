@@ -63,7 +63,9 @@ function splitURLandReturnComponents
 **[END OF LAB]**
 </p>
 
-**Lab 2 - Using Codeium to manage existing code**
+**Lab 2 - Using Codeium to refactor existing code**
+
+**Purpose: In this lab, we'll explore options for refactoring with Codeium**
 
 1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
 
