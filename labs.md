@@ -1,7 +1,7 @@
 # Codeium Basics
 ## Practical Tips and Best Practices
 ## Session labs
-## Revision 1.0 - 05/18/24
+## Revision 2.0 - 06/19/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -71,9 +71,9 @@ function splitURLandReturnComponents
 code prime.py
 ```
 
-2. Start typing a function definition as below
+2. Start typing a function definition as below and enter to get to a suggestion from Codeium.
 ```
-def is_prime(n
+def is_prime(n):
 ```
 3. Pick one of the offered suggestions and hit Tab. Continue until you get a full function definition. One example is shown below.
 
@@ -81,6 +81,7 @@ def is_prime(n
 
 4. Let's next try some of the refactor options provided by Codeium. Click on the *Refactor* link in the Codelens menu above the code. Then select the option to *Make this faster and more efficient* (You can click on the entry in the list or type in the selection in the text entry area.)
 
+![codelens refactor](./images/codeium-91.png?raw=true "codelens refactor")   
 ![refactor for efficiency](./images/codeium-25.png?raw=true "refactor for efficiency")         
 
 5. Codeium will then generate any suggested changes inline. Give it a moment to complete and then click on *Accept* to accept the changes.
