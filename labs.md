@@ -212,7 +212,7 @@ code prime-tests.py
   
 9. Let's double-check with Codeium for any missing test cases. With the *prime-tests.py* file open, go to the Chat interface and enter the following:
 ```
-identify any missing test cases
+identify any missing test cases and provide code for them
 
 ```
 10. After this runs for a bit, you will likely see it generating test cases for a few more areas. When its done generating them, you can select the ones you want from the suggested code and paste into your file.
