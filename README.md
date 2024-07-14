@@ -1,5 +1,5 @@
 # Copilot-vs-Codeium demo environment
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/codeium-basics?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/copilot-codeium?quickstart=1)
 
 ## Step 1. Follow the dialogs to sign in/sign up for Codeium.
 
