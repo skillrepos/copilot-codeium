@@ -1,16 +1,21 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
 
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			
 			"extensions": [
+				"GitHub.copilot-chat",
+				"GitHub.copilot",
 				"Codeium.codeium"
 			]
 		}
-	},
+	}
 	// Hopefully temporary hack to get around problem of Codeium not loading all the time
         "postCreateCommand": ".devcontainer/postCreate.sh"
 
